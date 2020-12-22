@@ -1,0 +1,9 @@
+.idea
+3rdparty
+target
+project/target
+project/project
+bazel-bin
+bazel-out
+bazel-testlogs
+bazel-play-scala-macwire-di-example
