@@ -94,9 +94,11 @@ _scala_image_repos()
 
 # update version as needed
 rules_play_routes_version = "bfaca5f186f2c3b989c80fd00f37a53b84406b3d"
+#rules_play_routes_version = "ba8d9e098139049eced93770391c0ae6db0b5b33"
 http_archive(
   name = "io_bazel_rules_play_routes",
   sha256 = "b0ae17af402e88da31fa41b16a6cf1d8eea53d693dd6b4c0c219d421078a2af5",
+  #sha256 = "065ee5ee0892a9b8f1e26fece52807d75808ac201b7fcd41529bf6211995dea1",
   strip_prefix = "rules_play_routes-{}".format(rules_play_routes_version),
   type = "zip",
   url = "https://github.com/lucidsoftware/rules_play_routes/archive/{}.zip".format(rules_play_routes_version),

@@ -20,6 +20,7 @@ scala_binary(
     ],
 )
 
+
 # scala_image(
 #     name = "main-docker2",
 #     srcs = [
