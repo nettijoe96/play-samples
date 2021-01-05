@@ -11,6 +11,7 @@ scala_library(
         "@third_party//3rdparty/jvm/com/typesafe/play:play_ws_2_13",
         "@third_party//3rdparty/jvm/com/typesafe/play:filters_helpers_2_13",
         "@third_party//3rdparty/jvm/com/typesafe/play:play_server_2_13",
+        "@third_party//3rdparty/jvm/com/typesafe/play:play_akka_http_server_2_13",
         ],
 )
 
