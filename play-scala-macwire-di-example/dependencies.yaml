@@ -44,12 +44,13 @@ dependencies:
     filters-helpers_2.13:
       lang: scala/unmangled
       version: "2.8.7"
+    play:
+      lang: scala/unmangled
+      modules: [ "server_2.13", "ws_2.13" ]
+      version: "2.8.7"
     play-json_2.13:
       lang: scala/unmangled
       version: "2.9.1"
-    play-ws_2.13:
-      lang: scala/unmangled
-      version: "2.8.7"
     play_2.13:
       lang: scala/unmangled
       version: "2.8.7"

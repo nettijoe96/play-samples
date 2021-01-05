@@ -11,7 +11,7 @@ scala_binary(
     deps = ["//:play", 
             "//:macwire", 
             "//app/controllers:controllers", 
-            "//app/services:services",],
+            "//app/services:services"],
     resource_strip_prefix = package_name(),
     classpath_resources = ["//conf:app_conf"],
     jvm_flags = [
