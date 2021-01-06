@@ -116,11 +116,11 @@ http_archive(
 )
 
 load("@io_bazel_rules_play_routes//:workspace.bzl", "play_routes_repositories")
-play_routes_repositories("2.7")
+play_routes_repositories("2.6")
 load("@play_routes//:defs.bzl", play_routes_pinned_maven_install = "pinned_maven_install")
 play_routes_pinned_maven_install()
 
 bind(
   name = "default-play-routes-compiler-cli",
-  actual = "@io_bazel_rules_play_routes//default-compiler-clis:scala_2_12_play_2_7"
+  actual = "@io_bazel_rules_play_routes//default-compiler-clis:scala_2_12_play_2_6"
 )

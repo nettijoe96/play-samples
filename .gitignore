@@ -1,3 +1,10 @@
 logs/
 target/
 RUNNING_PID
+.DS_Store
+3rdparty
+bazel-bin
+bazel-out
+bazel-testlogs
+.idea
+play-scala-macwire-di-example/bazel-play-scala-macwire-di-example
