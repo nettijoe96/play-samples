@@ -4,9 +4,8 @@ version := "2.6.x"
 
 lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
-scalaVersion := "2.12.10"
+scalaVersion := "2.11.12"
 
-crossScalaVersions := Seq("2.11.12", "2.12.10")
-
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.3" % Test
-libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.3.1" % "provided"
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "2.0.0-M1" % "test"
+libraryDependencies += "com.softwaremill.macwire" %% "macros" % "2.3.0" % "provided"
+//libraryDependencies += "com.typesafe.play" %% "play-ws" % "2.5.18"
