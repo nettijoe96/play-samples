@@ -1,9 +1,13 @@
-# play-scala-macwire-di-example
+# bazel integration checklist
 
-This is an example project for setting up Play with Macwire compile time dependency injection.
-
-For further details, please see:
-
-* <https://www.playframework.com/documentation/latest/ScalaCompileTimeDependencyInjection>
-* <https://github.com/adamw/macwire/blob/master/README.md>
-* <https://di-in-scala.github.io/>
+- [x] play 
+- [x] macwire
+- [x] routes and controller
+- [x] 2.11
+- [ ] Docker images
+- [ ] mongo
+- [ ] intricate application.conf 
+- [ ] swagger
+- [ ] Logging
+- [ ] auth
+- [ ] Testing
