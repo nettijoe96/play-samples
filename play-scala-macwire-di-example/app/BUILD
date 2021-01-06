@@ -1,4 +1,6 @@
-load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library", "scala_binary", "scala_test")
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_library", "scala_binary", "scala_test",)
+load("@io_bazel_rules_docker//scala:image.bzl", "scala_image",)
+#load("@io_bazel_rules_docker//container:container.bzl", "container_image")
 
 scala_binary(
     name = "bin",
@@ -20,13 +22,42 @@ scala_binary(
     ],
 )
 
-
 # scala_image(
-#     name = "main-docker2",
+#     name = "image",
 #     srcs = [
-#             "scala/Main.scala",
-#             ],
-#     base = "//:custom_java_base",
-#     main_class = "Main",
-#     deps = [":mylib"],
+#             "GreetingApplicationLoader.scala", 
+#             "GreetingModule.scala",
+#             "//conf:play-routes"],
+#     visibility = ["//visibility:public"],
+#     main_class = "play.core.server.ProdServerStart",
+#     deps = ["//:play", 
+#             "//:macwire", 
+#             "//app/controllers:controllers", 
+#             "//app/services:services"],
+#     resource_strip_prefix = package_name(),
+#     classpath_resources = ["//conf:app_conf"],
+#     jvm_flags = [
+#     "-Dhttp.port=9000",
+#     "-Dapplication.name=bin",
+#     ],
+#     #base = "//:custom_java_base",
 # )
+
+# this is the base docker image used for all scala_image targets
+# adoptopenjdk is great, but their images do not have the `java` executable at the path expected by rules_docker
+
+# container_image(
+#     name = "custom_java_base",
+#     base = "@openjdk-base//image",
+#     symlinks = {"/usr/bin/java": "/opt/java/openjdk/bin/java"},
+#     visibility = ["//visibility:public"],
+# )
+
+scala_image(
+    name = "test",
+    srcs = [
+            "Main.scala",
+            ],
+    #base = "//:custom_java_base",
+    main_class = "Main",
+)
