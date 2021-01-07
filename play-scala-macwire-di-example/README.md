@@ -4,7 +4,7 @@
 - [x] macwire
 - [x] routes and controller
 - [x] 2.11
-- [ ] Docker images
+- [x] Docker images
 - [ ] mongo
 - [ ] intricate application.conf 
 - [ ] swagger
