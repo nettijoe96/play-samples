@@ -1,8 +1,8 @@
 package controllers
 
-import models.Greeting
+import models.{Entry, Greeting}
 import play.api.i18n.Langs
-import play.api.libs.json.Json
+import play.api.libs.json.{Json, OWrites}
 import play.api.mvc.{AbstractController, ControllerComponents}
 import play.twirl.api.Html
 import services.GreetingService
@@ -26,6 +26,12 @@ class GreeterController(greetingService: GreetingService,
 
   def index = Action {
     Ok(Html("<h1>Welcome</h1><p>Your new application is ready.</p>"))
+  }
+
+  def insert = Action {
+    val entry = Entry("myname", 3)
+    greetingService.insert(entry)
+    Ok
   }
 
 }
